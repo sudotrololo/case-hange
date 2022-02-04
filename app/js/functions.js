@@ -222,7 +222,7 @@ function changeСaseInstrumental(word) {
             if (ending === "а") return wordWithoutEnding + "ой";
             if (ending === "я") return wordWithoutEnding + "ей";
             if (ending === "ья") return wordWithoutEnding + "ей";
-            if (ending === "ия") return wordWithoutEnding + "ей";
+            if (ending === "ия") return wordWithoutEnding + "ией";
             return word;
 
         case "second_declension":
@@ -252,7 +252,6 @@ function changeСaseInstrumental(word) {
             if (ending === "ьё" || ending === "ье") return wordWithoutEnding + "ьем";
             if (ending === "ь") return wordWithoutEnding + "ем";
             return word;
-
         case "third_declension":
             if (ending === "ь") return wordWithoutEnding + "ью";
 
