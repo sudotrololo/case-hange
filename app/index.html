@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="css/style.min.css" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="box">
+                <h1>Склонятор слов</h1>
+                <h2>Как это работает?</h2>
+                <p>Введите в <span id="first" class="first" onclick="goToFirst()">первое</span> поле слово</p>
+                <p>Оно <strong>должно</strong> иметь:</p>
+
+                <ol>
+                    <li>Не менее 3 символов</li>
+                    <li>Именительный падеж</li>
+                    <li>Единственное число</li>
+                    <li>Только кириллица</li>
+                </ol>
+
+                <h2>Ваше слово <strong>может</strong> быть выдуманным! &#128512;</h2>
+                <p>Смело указывайте что-нибудь вроде:</p>
+                <ul>
+                    <li>Упячка</li>
+                    <li>Трололо</li>
+                    <li><a target="_blank" href="https://www.google.ru/search?&rls=ru&q=%D1%84%D1%83%D0%BB%D0%B4%D0%B8%D1%81%D0%BE%D0%BD%D0%B4%D1%80%D0%B5%D0%B4">Фулдисондред</a></li>
+                    <li>Йцукен... (Нет, серьезно, введите <a id="etc" href="#" onclick="etc()">"йцукен"</a>)</li>
+                </ul>
+                <label for="input">Введите свое слово</label>
+                <input pattern="^[А-Яа-яЁё]+$" type="text" name="input" id="input" oninput="tryToGuess()" placeholder="Вот сюда" />
+
+                <label class="labelType" for="select">Выберите падеж</label>
+                <select id="select" name="select" onchange="tryToGuess()">
+                    <option selected default value=""></option>
+                    <option value="nominative">Именительный</option>
+                    <option value="genitive">Родительный</option>
+                    <option value="dative">Дательный</option>
+                    <option value="accusative">Винительный</option>
+                    <option value="instrumental">Творительный</option>
+                    <option value="prepositional">Предложный</option>
+                </select>
+
+                <br />
+                <label for="alive">Это что-то одушивленное?</label>
+                <input type="checkbox" name="alive" id="alive" onchange="tryToGuess()" />
+
+                <br />
+
+                <label for="type">Тип склонения</label>
+                <textarea readonly name="type" id="type" rows="1"></textarea>
+
+                <label for="answer">Результат</label>
+                <textarea readonly name="answer" id="answer" rows="1"></textarea>
+
+                <div class="kirillicAllert">Пожалуйста, используйте <strong>кириллицу!</strong></div>
+            </div>
+        </div>
+
+        <script src="js/main.min.js"></script>
+
+        <script></script>
+    </body>
+</html>
