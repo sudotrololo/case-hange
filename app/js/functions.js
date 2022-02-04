@@ -97,6 +97,7 @@ function changeСaseToGenitive(word) {
             if (ending === "а") return wordWithoutEnding + "у";
             if (ending === "о") return wordWithoutEnding + "а";
             if (ending === "ай") return wordWithoutEnding + "ая";
+            if (ending === "ие") return wordWithoutEnding + "ия";
             if (ending === "ий" && isAlive) return wordWithoutEnding + "ия";
             if (ending === "ий") return word;
             if (ending === "ей" && lastLetter === "м") return wordWithoutEnding + "ея";
